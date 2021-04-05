@@ -25,6 +25,15 @@ public class ArraySorterTest {
         Assert.assertEquals(true, result);
     }
 
-    //TODO: add tests for other positive and negative scenarios
+    @Test
+    public void shouldSortWhenNegativeNumbers(){
+        int[] arrayBox1 = {4, 666, 0, -1, 2, 12435654, 2};
+        int[] arrayBox2 = {-1, 0, 2, 2, 4, 666, 12435654};
+        Array array1 = new Array(arrayBox1);
+        Array array2 = new Array(arrayBox2);
+        ArraySorter arraySorter = new ArraySorter();
+        arraySorter.sort(array1);
 
+        Assert.assertArrayEquals(array1.getItems(), array2.getItems());
+    }
 }
